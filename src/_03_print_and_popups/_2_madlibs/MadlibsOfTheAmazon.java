@@ -23,8 +23,8 @@ public class MadlibsOfTheAmazon {
 		// the values entered by the player.
 		// Hint:  You will need to add more + signs to join the variables to the other parts of the story.
 		
-		String story ="Piranhas are more " + adjective + "during the day, so cross the river at\n"  +
-		"night. Piranhas are attracted to fresh" +liquid + "and will most\n"  +
+		String story ="Piranhas are more" + adjective + "during the day, so cross the river at\n"  +
+		"night. Piranhas are attracted to fresh" +liquid + " and will most\n"  +
 		"likely take a bite out of your" +bodyPart+ "if you" +verb+ "Whatever\n"  +
 		"you do, if you have an open wound, try to find another way to get\n"  +
 		"back to the" + place + "Good luck!");

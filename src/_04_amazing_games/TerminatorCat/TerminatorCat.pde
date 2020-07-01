@@ -9,14 +9,19 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x=220; // 220
+int y=280; // 280
+
+int x2=320;
+int y2= 270;
 
 void setup() {
-  
+  size(500,500);
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
 cat = loadImage("big_eyed_cat.jpg");
+cat.resize(width,height);
+background(cat);
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
 
@@ -35,7 +40,14 @@ void draw() {
       if(mousePressed){
           println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
       }
+      
 
+  //    ellipse(220,280,50,50);
+  //    ellipse(320,270,50,50);
+      //         X    Y
+  // left eye : 220, 280
+  // right eye: 320, 270
+  
 // 7. Run the program and click on one of the cat's eyes. 
 //    The x,y position of the eye will be printed at the bottom of your processing window. 
 //    Variables for x and y have been created at the top of your sketch, 
@@ -46,12 +58,16 @@ void draw() {
 
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
+fill(#FF0303);
+fill(random(255), random(255), random(255));
 
-
+// fill( random(), 
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+noStroke();
+                 ellipse(x,y,50,50);
+                   ellipse(x2,y2,50,50);
 // Run the program to make sure it is in the right place and is the right size.
 }
 
@@ -59,8 +75,11 @@ void draw() {
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
-    x+=1;
-    y+=1;
+    x = x + 5;
+    y += 1;
+    
+    x2 = x2 + 5;
+    y2 += 1;
     
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
